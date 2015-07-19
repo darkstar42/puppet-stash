@@ -43,6 +43,14 @@
 <% end -%>
         />
 
+<% if @connector and ! @connector.empty? -%>
+        <Connector 
+<%   @connector.sort.each do |key, value| -%>
+                   <%= key %> = <%= "\"#{value}\"" %>
+<%   end -%>
+        />
+<% end -%>
+
         <Engine name="Catalina" defaultHost="localhost">
 
             <Realm className="org.apache.catalina.realm.LockOutRealm">

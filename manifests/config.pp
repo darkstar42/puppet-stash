@@ -9,6 +9,7 @@ class stash::config(
   $proxy        = $stash::proxy,
   $context_path = $stash::context_path,
   $tomcat_port  = $stash::tomcat_port,
+  $connector    = $stash::connector,
 ) {
 
   # Atlassian changed where files are installed from ver 3.2.0
